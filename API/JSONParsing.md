@@ -1,26 +1,32 @@
-# Parsing a json
-
-Parsing JSON into a struct :
+# Parsing JSON into a struct
 
 1:1 example. All varibles need to have a coding key.
 
 ```swift
+public typealias Codable = Decodable & Encodable
+```
+
+```swift
 struct Flim : Codable {
-	var title : String
-	var year : String
-	var rated : String
-	var released : String
-	
+	let title : String
+	let year : String
+	let rated : String
+	let released : String
+	let identifier: Int
+
 	enum CodingKeys: String, CodingKey {
 		case title = "Title"
 		case year = "Year"
 		case rated = "Rated"
 		case released = "Released"
+		case identifier = "id"
 	}
 }
 ```
 
-JSON file
+## JSON file example
+
+Check property types of the json values.
 
 ```
 {
@@ -32,7 +38,7 @@ JSON file
 }
 ```
 
-Parse into a struct
+## Parse into a struct
 
 ```swift
 	func readLocalFile(forName name: String) -> Data? {
