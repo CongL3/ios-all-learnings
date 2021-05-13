@@ -57,3 +57,31 @@ Check property types of the json values.
 	}
 ```
 
+## Custom format - Date
+
+```json
+{
+    "title": "Optionals in Swift explained: 5 things you should know",
+    "date": "2019-10-21T09:15:00Z"
+}
+```
+
+```swift
+struct BlogPost: Decodable {
+    let title: String
+    let date: Date
+}
+
+let decoder = JSONDecoder()
+let dateFormatter = DateFormatter()
+dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+dateFormatter.locale = Locale(identifier: "en_US")
+dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+decoder.dateDecodingStrategy = .formatted(dateFormatter)
+
+let blogPost: BlogPost = try! decoder.decode(BlogPost.self, from: jsonData)
+print(blogPost.date) // Prints: 2019-10-21 09:15:00 +0000
+
+```
+
+Reference : https://www.avanderlee.com/swift/json-parsing-decoding/
