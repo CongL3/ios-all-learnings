@@ -1,4 +1,14 @@
-Adding a package
+# Swift Package Manager
+
+![Swift Package Manager location](file:///Users/congle/Documents/Dev/ios-all-learnings/Images/Swift Package Manager location.png?lastModify=1621237231)
+
+
+
+## Delete 
+
+![Swift Package Manager - Delete](file:///Users/congle/Documents/Dev/ios-all-learnings/Images/Swift Package Manager - Delete.png?lastModify=1621237231)
+
+
 
 
 
@@ -6,7 +16,7 @@ https://developer.apple.com/documentation/swift_packages/adding_package_dependen
 
 
 
-Creating your own
+## Creating your own
 
 https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager/#adding-remote-dependencies
 
