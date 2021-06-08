@@ -30,3 +30,20 @@ struct ContentView: View {
 }
 ```
 
+
+"Dismiss view controller"
+
+```swift
+import SwiftUI
+
+struct GameView: View {
+    
+    @Environment(\.presentationMode) var presentation
+    
+    var body: some View {
+        Button("Done") {
+            self.presentation.wrappedValue.dismiss()
+        }
+    }
+}
+```

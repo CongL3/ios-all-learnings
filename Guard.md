@@ -4,3 +4,20 @@ guard let nextDate = theCalendar.date(byAdding: dayComponent, to: startDate) els
 }
 ```
 
+
+
+Optional chaining
+
+
+
+```swift
+	func load(url: String?) {
+		
+		guard let link = url,
+		   let url = URL(string: link) else { return }
+		
+		openURL(url)
+	}
+
+```
+

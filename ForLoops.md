@@ -20,3 +20,11 @@ for (index, element) in list.enumerated() {
 index == 0 ? 25: CGFloat(index) * (9770/70)
 ```
 
+
+
+```swift
+for number in 1...10 {
+    // do something
+}
+```
+
