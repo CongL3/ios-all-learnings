@@ -198,3 +198,10 @@ Toyo enjoys 🍕
 Failed person is empty
 ```
 
+
+
+![image-20210609021826277](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210609021826277.png)
+
+
+
+![image-20210609022608612](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210609022608612.png)
