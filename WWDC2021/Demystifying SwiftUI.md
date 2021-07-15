@@ -15,10 +15,8 @@ SwiftUI is value types so there’s no pointers, all structs.
 **Identity** 
 
 ViewIdentity = Same identity then they transition in a different way
-
-​	Explicit identity
-
-​		Setting names -> name of different dogs
+	Explicit identity
+	Setting names -> name of different dogs
 
 ​		But someone has to keep track of all the names
 
