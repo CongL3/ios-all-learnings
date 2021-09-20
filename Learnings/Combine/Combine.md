@@ -198,3 +198,19 @@ Toyo enjoys 🍕
 Failed person is empty
 ```
 
+
+
+![image-20210916191717575](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210916191717575.png)
+
+
+
+![image-20210919195726312](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210919195726312.png)
+
+
+
+![image-20210919213914425](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210919213914425.png)
+
+
+
+@publisher is subject value publisher with the type erased to anypublisher
+
