@@ -368,3 +368,97 @@ car.$kwhInBattery
   })
 ```
 
+However, because kwhInBattery now refers to the underlying Double value, we can’t subscribe to it directly.
+To subscribe to an @Published property’s changes, you need to use a $ prefix. This is a special convention for property wrappers that allows you to access the wrapper itself, also known as a projected value rather than the value that is wrapped by the property. In this case, the wrapper’s projected value is a publisher so we can subscribe to the $kwhInBattery property
+
+#### Choosing the appropriate mechanism to publish information
+
+Which publishing mechanism is best for you depends on several factors. If you’re publishing a stream of events without a concept of state, you’re probably looking for a PassthroughSubject. These are not commonly found on models, and they are better suited for publishing a stream of user interactions, or as I’ve shown, an event stream like NotificationCenter emits. If you have a model that’s defined as a struct, you can expose new data through a CurrentValueSubject. This allows you to continuously send new values to subscribers while keeping a concept of the current state, or value. And lastly, if you have a class and you want to have similar behavior to a CurrentValueSubject except for not being to end the stream of values if needed, the @Published property wrapper is likely to fit your needs perfectly.
+
+
+
+The assign(to: on:) operator in Combine is similar to sink. It creates a new Subscriber, and it returns an AnyCancellable that we must retain to keep the subscription alive
+
+
+
+#### “Directly assigning the output of a publisher with assign(to:on:)
+
+In the previous section, I’ve shown you the following code:
+
+```swift
+class Car {
+  @Published var kwhInBattery = 50.0
+  let kwhPerKilometer = 0.14
+
+  func drive(kilometers: Double) {
+    let kwhNeeded = kilometers * kwhPerKilometer
+
+    assert(kwhNeeded <= kwhInBattery, "Can't make trip, not enough charge in battery")
+    
+    kwhInBattery -= kwhNeeded
+
+  }
+}
+
+let car = Car()
+// don't forget to store the AnyCancellable if you're using this in a real app
+car.$kwhInBattery
+  .sink(receiveValue: { newCharge in
+    someLabel.text = "The car now has \(newCharge)kwh in its battery"
+  })
+```
+
+
+The text property of someLabel in this example is always set to a new string that reflects the car’s current battery status. Let’s expand this example a little bit and introduce a view controller and a view model:
+
+```swift
+class Car {
+  @Published var kwhInBattery = 50.0
+
+ let kwhPerKilometer = 0.14
+}
+
+struct CarViewModel {
+  var car: Car
+
+  mutating func drive(kilometers: Double) {
+    let kwhNeeded = kilometers * car.kwhPerKilometer
+
+    assert(kwhNeeded <= car.kwhInBattery, "Can't make trip, not enough charge in battery")
+
+    car.kwhInBattery -= kwhNeeded
+  }
+}
+
+class CarStatusViewController {
+  let label = UILabel()
+  let button = UIButton()
+  var viewModel: CarViewModel
+  var cancellables = Set<AnyCancellable>()
+
+  init(viewModel: CarViewModel) {
+    self.viewModel = viewModel
+  }
+
+  // setup code goes here
+
+  func setupLabel() {
+    // label setup will go here
+  }
+
+  func buttonTapped() {
+    viewModel.drive(kilometers: 10)
+  }
+}
+```
+
+The VM has to listen to the @publish and and expose and format to the label
+
+```swift
+lazy var batterySubject: AnyPublisher<String?, Never> = {
+  return car.$kwhInBattery.map({ newCharge in
+    return "The car now has \(newCharge)kwh in its battery"
+  }).eraseToAnyPublisher()
+}()
+```
+

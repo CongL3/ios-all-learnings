@@ -26,3 +26,19 @@ To re-enforce the local nature of `@State` properties, Apple recommends you mark
 @State private var username = ""
 ```
 
+
+
+```swift
+struct ExampleView: View {
+  @State private var sliderValue: Float = 50
+
+  var body: some View {
+    VStack {
+      Text("Slider is at \(sliderValue)")
+      Slider(value: $sliderValue, in: (1...100))
+    }
+  }
+}
+```
+
+In SwiftUI, properties that are marked with @State trigger UI updates when they change. They can also be used to create bindings between a UI element, and your app’s state like this example shows. I don’t know whether @State uses Combine internally, or whether it uses some other mechanism to update the view when the value of the wrapped property changes. What I do know, is that Apple seems to have decided that the kind of binding I just demonstrated is important for SwiftUI and that it’s not as important in UIKit.
