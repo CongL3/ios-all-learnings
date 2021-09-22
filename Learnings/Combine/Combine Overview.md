@@ -1,6 +1,24 @@
-# Combine
+#  Combine
+
+![image-20210922135611059](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922135611059.png)
 
 
+
+![image-20210922135316901](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922135316901.png)
+
+![image-20210922135121203](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922135121203.png)
+
+
+
+
+
+![image-20210922134856763](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922134856763.png)
+
+![image-20210922132244651](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922132244651.png)
+
+
+
+![image-20210922132203922](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922132203922.png)
 
 ### compactMap - Removes nils
 
@@ -214,3 +232,4 @@ Failed person is empty
 
 @publisher is subject value publisher with the type erased to anypublisher
 
+![image-20210922131355315](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922131355315.png)
