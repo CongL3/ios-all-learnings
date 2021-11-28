@@ -4,7 +4,7 @@
 
 <img src="/Images/image-20210922135611059.png" width=70%>
 
-[[/Images/image-20210922135611059.png|width=100px]]
+[/Images/image-20210922135611059.png|width=100px]
 
 
 
