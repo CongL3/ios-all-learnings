@@ -58,9 +58,7 @@ print(doubled)
 it is a pattern that listens to events and once a change happens the UI react to it
 publishers (emit an event) and subscriptions (listen to the event)
 
-<img src="/Users/congle/Documents/Dev/ios-all-learnings/Images/Publisher and Subscription.png" alt="Publisher and Subscription" style="zoom:50%;" />
-
-
+<img src="/Images/Publisher and Subscription.png" width=50%>
 
 ### AnyCannellable
 
@@ -76,7 +74,7 @@ When you want the final value out of the subscription
 
 ### Example
 
-![Publisher and Subscription 2](/Users/congle/Documents/Dev/ios-all-learnings/Images/Publisher and Subscription 2.png)
+<img src="/Images/Publisher and Subscription 2.png" width=50%>
 
 
 
@@ -206,20 +204,12 @@ Toyo enjoys 🍕
 Failed person is empty
 ```
 
-
-
-![image-20210916191717575](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210916191717575.png)
-
-
-
-![image-20210919195726312](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210919195726312.png)
-
-
-
-![image-20210919213914425](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210919213914425.png)
+<img src="/Images/image-20210916191717575.png" width=70%>
+<img src="/Images/image-20210919195726312.png" width=70%>
+<img src="/Images/image-20210919213914425.png" width=70%>
 
 
 
 @publisher is subject value publisher with the type erased to anypublisher
 
-![image-20210922131355315](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922131355315.png)
+<img src="/Images/image-20210922131355315.png" width=70%>
