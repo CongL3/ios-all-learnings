@@ -17,9 +17,9 @@ WWDC 2021
 [Combine Networking](iOS/Combine/CombineNetworking.md)
 
 
-### Combine
-[Overview](iOS/Combine/Overview.md)  
-[Pratical Combine](iOS/Combine/PraticalCombineNotes.md)  
+## Combine
+*[Overview](iOS/Combine/Overview.md)  
+* [Pratical Combine](iOS/Combine/PraticalCombineNotes.md)  
 
 [2 Way Binding](iOS/Combine/CombineNetworking.md)  
 [CollectionViews](iOS/Combine/CollectionViews.md)  
