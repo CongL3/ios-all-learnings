@@ -1,11 +1,9 @@
 #  Combine
 
-![image-20210922135611059](/Images/image-20210922135611059.png)
+![image-20210922135611059](/Images/image-20210922135611059.png | width=200)
 
 
-https://github.com/CongL3/ios-all-learnings/blob/main/Images/image-20210922135611059.png
-
-![image-20210922135316901](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922135316901.png)
+![image-20210922135316901](/Images/image-20210922135316901.png)
 
 ![image-20210922135121203](/Users/congle/Documents/Dev/ios-all-learnings/Images/image-20210922135121203.png)
 
