@@ -42,3 +42,40 @@ func fetchURL<T: Decodable>(_ url: URL) -> AnyPublisher<T, Error> {
     .eraseToAnyPublisher()
 ```
 
+
+
+```swift
+import Foundation
+import Combine
+
+protocol CreditServiceProtocol {
+	func getCreditData() -> AnyPublisher<CreditScoreResponse, Error>
+}
+
+class CreditScoreService: CreditServiceProtocol {
+	
+	let urlSession: URLSession;
+	
+	init(urlSession: URLSession = .shared) {
+		self.urlSession = urlSession
+	}
+	
+	func getCreditData() -> AnyPublisher<CreditScoreResponse, Error> {
+		let url = URL(string: "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values")!
+		
+		return urlSession
+			.dataTaskPublisher(for: url)
+			.tryMap { data, response in
+				guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+					throw URLError(.badServerResponse)
+				}
+				return data
+			}
+			.decode(type: CreditScoreResponse.self, decoder: JSONDecoder())
+			.receive(on: DispatchQueue.main)
+			.eraseToAnyPublisher()
+	}
+
+}
+```
+
