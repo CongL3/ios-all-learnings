@@ -2,7 +2,7 @@
 
 ![image-20210922135611059](/Images/image-20210922135611059.png)
 
-<img src="/Images/image-20210922135611059.png" width=50% height=50%>
+<img src="/Images/image-20210922135611059.png" width=70%>
 
 
 
