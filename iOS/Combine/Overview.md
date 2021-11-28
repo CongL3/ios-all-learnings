@@ -1,6 +1,6 @@
 #  Combine
 
-![image-20210922135611059](./Images/image-20210922135611059.png)
+![image-20210922135611059](/Images/image-20210922135611059.png)
 
 
 https://github.com/CongL3/ios-all-learnings/blob/main/Images/image-20210922135611059.png
