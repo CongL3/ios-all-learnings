@@ -1,6 +1,9 @@
 #  Combine
 
-![image-20210922135611059] (/Images/image-20210922135611059.png | width=300px)
+![image-20210922135611059](/Images/image-20210922135611059.png)
+
+<img src="/Images/image-20210922135611059.png" width=50% height=50%>
+
 
 
 ![image-20210922135316901](/Images/image-20210922135316901.png)
