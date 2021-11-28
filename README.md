@@ -18,11 +18,11 @@ WWDC 2021
 
 
 ## Combine
-* [Overview](iOS/Combine/Overview.md)  
-* [Pratical Combine](iOS/Combine/PraticalCombineNotes.md)  
+* [Overview](iOS/Combine/Overview.md)
+* [Pratical Combine](iOS/Combine/PraticalCombineNotes.md)
 
-* [2 Way Binding](iOS/Combine/CombineNetworking.md)  
-* [CollectionViews](iOS/Combine/CollectionViews.md)  
-* [Limiting Frequency](iOS/Combine/LimitingFrequency.md)  
-* [Multiple User Inputs](iOS/Combine/MultipleUserInputs.md)  
-* [Networking](iOS/Combine/Networking.md)  
+* [2 Way Binding](iOS/Combine/CombineNetworking.md)
+* [CollectionViews](iOS/Combine/CollectionViews.md)
+* [Limiting Frequency](iOS/Combine/LimitingFrequency.md)
+* [Multiple User Inputs](iOS/Combine/MultipleUserInputs.md)
+* [Networking](iOS/Combine/Networking.md)
