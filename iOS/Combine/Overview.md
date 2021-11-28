@@ -4,6 +4,8 @@
 
 <img src="/Images/image-20210922135611059.png" width=70%>
 
+[[/Images/image-20210922135611059.png|width=100px]]
+
 
 
 ![image-20210922135316901](/Images/image-20210922135316901.png)
